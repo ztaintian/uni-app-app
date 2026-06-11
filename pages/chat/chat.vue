@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <view class="page">
     <view class="header">
       <view>
@@ -75,11 +75,11 @@ const visibleConversations = computed(() => {
 })
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .page {
   min-height: 100vh;
-  padding: 28rpx 28rpx 148rpx;
-  background: #f5f8f8;
+  padding: $app-page-padding $app-page-padding $app-page-bottom-padding;
+  background: $app-color-page;
   box-sizing: border-box;
 }
 
@@ -101,14 +101,14 @@ const visibleConversations = computed(() => {
 }
 
 .eyebrow {
-  color: #527174;
+  color: $app-color-text-eyebrow;
   font-size: 24rpx;
   line-height: 32rpx;
 }
 
 .title {
   margin-top: 8rpx;
-  color: #112c30;
+  color: $app-color-text-title;
   font-size: 44rpx;
   font-weight: 800;
   line-height: 54rpx;
@@ -117,19 +117,19 @@ const visibleConversations = computed(() => {
 .status {
   flex-shrink: 0;
   padding: 14rpx 22rpx;
-  color: #007f82;
+  color: $app-color-primary-dark;
   font-size: 24rpx;
-  background: #dcfbfb;
-  border-radius: 6rpx;
+  background: $app-color-primary-soft;
+  border-radius: $app-radius-control;
 }
 
 .summary {
   justify-content: space-between;
   margin-top: 28rpx;
   padding: 26rpx;
-  background: #ffffff;
-  border: 1rpx solid #e8eef0;
-  border-radius: 8rpx;
+  background: $app-color-surface;
+  border: 1rpx solid $app-color-border;
+  border-radius: $app-radius-card;
 }
 
 .summary-item {
@@ -139,7 +139,7 @@ const visibleConversations = computed(() => {
 }
 
 .summary-value {
-  color: #102f34;
+  color: $app-color-text-strong;
   font-size: 34rpx;
   font-weight: 800;
   line-height: 42rpx;
@@ -147,7 +147,7 @@ const visibleConversations = computed(() => {
 
 .summary-label {
   margin-top: 6rpx;
-  color: #728286;
+  color: $app-color-text-secondary;
   font-size: 22rpx;
   line-height: 30rpx;
 }
@@ -166,11 +166,11 @@ const visibleConversations = computed(() => {
   height: 58rpx;
   margin: 0;
   padding: 0 12rpx;
-  color: #5e7074;
+  color: $app-color-text-tab;
   font-size: 28rpx;
   line-height: 58rpx;
   background: transparent;
-  border-radius: 0;
+  border-radius: $app-radius-none;
 }
 
 .tab::after {
@@ -178,7 +178,7 @@ const visibleConversations = computed(() => {
 }
 
 .tab.active {
-  color: #102f34;
+  color: $app-color-text-strong;
   font-weight: 800;
 }
 
@@ -194,9 +194,9 @@ const visibleConversations = computed(() => {
   display: flex;
   gap: 18rpx;
   padding: 28rpx;
-  background: #ffffff;
-  border: 1rpx solid #e8eef0;
-  border-radius: 8rpx;
+  background: $app-color-surface;
+  border: 1rpx solid $app-color-border;
+  border-radius: $app-radius-card;
 }
 
 .avatar {
@@ -206,11 +206,11 @@ const visibleConversations = computed(() => {
   justify-content: center;
   width: 76rpx;
   height: 76rpx;
-  color: #ffffff;
+  color: $app-color-surface;
   font-size: 30rpx;
   font-weight: 800;
-  background: #243b53;
-  border-radius: 8rpx;
+  background: $app-color-brand-deep;
+  border-radius: $app-radius-card;
 }
 
 .online-dot {
@@ -219,9 +219,9 @@ const visibleConversations = computed(() => {
   bottom: -2rpx;
   width: 18rpx;
   height: 18rpx;
-  background: #00b8b8;
-  border: 4rpx solid #ffffff;
-  border-radius: 50%;
+  background: $app-color-primary-strong;
+  border: 4rpx solid $app-color-surface;
+  border-radius: $app-radius-round;
 }
 
 .conversation-main {
@@ -237,7 +237,7 @@ const visibleConversations = computed(() => {
 }
 
 .name {
-  color: #172b2d;
+  color: $app-color-text;
   font-size: 30rpx;
   font-weight: 800;
   line-height: 38rpx;
@@ -245,7 +245,7 @@ const visibleConversations = computed(() => {
 
 .time,
 .role {
-  color: #728286;
+  color: $app-color-text-secondary;
   font-size: 22rpx;
   line-height: 30rpx;
 }
@@ -256,7 +256,7 @@ const visibleConversations = computed(() => {
 
 .message {
   margin-top: 12rpx;
-  color: #40585c;
+  color: $app-color-text-message;
   font-size: 26rpx;
   line-height: 36rpx;
 }
@@ -265,11 +265,11 @@ const visibleConversations = computed(() => {
   align-self: flex-start;
   margin-top: 16rpx;
   padding: 8rpx 14rpx;
-  color: #007f82;
+  color: $app-color-primary-dark;
   font-size: 22rpx;
   line-height: 28rpx;
-  background: #effafa;
-  border-radius: 4rpx;
+  background: $app-color-primary-pale;
+  border-radius: $app-radius-tag;
 }
 
 .badge {
@@ -278,11 +278,11 @@ const visibleConversations = computed(() => {
   right: 24rpx;
   min-width: 34rpx;
   height: 34rpx;
-  color: #ffffff;
+  color: $app-color-surface;
   font-size: 20rpx;
   line-height: 34rpx;
   text-align: center;
-  background: #ff5a5f;
-  border-radius: 17rpx;
+  background: $app-color-danger;
+  border-radius: $app-radius-badge;
 }
 </style>

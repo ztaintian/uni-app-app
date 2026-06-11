@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <view class="bottom-nav">
     <button
       v-for="item in items"
@@ -38,17 +38,17 @@ function handleChange(key) {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .bottom-nav {
   position: fixed;
   right: 0;
   bottom: 0;
   left: 0;
   display: flex;
-  height: 112rpx;
+  height: $app-bottom-nav-height;
   padding-bottom: env(safe-area-inset-bottom);
-  background: #ffffff;
-  border-top: 1rpx solid #e8eef0;
+  background: $app-color-surface;
+  border-top: 1rpx solid $app-color-border;
 }
 
 .nav-item {
@@ -57,13 +57,13 @@ function handleChange(key) {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  height: 112rpx;
+  height: $app-bottom-nav-height;
   margin: 0;
   padding: 0;
-  color: #7a8a8e;
+  color: $app-color-text-light;
   line-height: 1;
   background: transparent;
-  border-radius: 0;
+  border-radius: $app-radius-none;
 }
 
 .nav-item::after {
@@ -71,7 +71,7 @@ function handleChange(key) {
 }
 
 .nav-item.active {
-  color: #00a6a6;
+  color: $app-color-primary;
 }
 
 .nav-icon {

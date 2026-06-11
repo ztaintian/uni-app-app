@@ -121,7 +121,11 @@
 
 ## 样式规范
 
-- 公共样式、主题变量、mixin 放到 `styles/` 或 `uni.scss`。
+- Vue 文件中的样式默认使用 `<style lang="scss" scoped>`。
+- `uni.scss` 保留为 uni-app 约定入口文件，用于引入 `styles/` 下的公共样式文件。
+- 主题变量放到 `styles/theme.scss`。
+- 公共 mixin 放到 `styles/mixins.scss`。
+- 公共样式类放到 `styles/common.scss`。
 - 页面样式尽量只写当前页面布局。
 - 组件样式尽量使用 `scoped`，避免污染全局。
 - 移动端尺寸优先使用 `rpx`。

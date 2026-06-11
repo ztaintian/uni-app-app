@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <view class="search-card">
     <view class="search-row">
       <text class="search-icon">⌕</text>
@@ -34,13 +34,13 @@ function handleInput(event) {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .search-card {
   padding: 16rpx 20rpx;
-  background: #ffffff;
-  border: 1rpx solid #e7eef0;
-  border-radius: 8rpx;
-  box-shadow: 0 8rpx 24rpx rgba(15, 39, 46, 0.06);
+  background: $app-color-surface;
+  border: 1rpx solid $app-color-border-search;
+  border-radius: $app-radius-card;
+  box-shadow: $app-shadow-search;
 }
 
 .search-row {
@@ -51,7 +51,7 @@ function handleInput(event) {
 
 .search-icon {
   width: 44rpx;
-  color: #00a6a6;
+  color: $app-color-primary;
   font-size: 34rpx;
   line-height: 1;
 }
@@ -59,7 +59,7 @@ function handleInput(event) {
 .search-input {
   flex: 1;
   height: 64rpx;
-  color: #172b2d;
+  color: $app-color-text;
   font-size: 28rpx;
 }
 
@@ -67,15 +67,15 @@ function handleInput(event) {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 112rpx;
+  width: $app-search-button-width;
   height: 56rpx;
   margin: 0;
   padding: 0;
-  color: #ffffff;
+  color: $app-color-surface;
   font-size: 24rpx;
   line-height: 56rpx;
-  background: #00b8b8;
-  border-radius: 6rpx;
+  background: $app-color-primary-strong;
+  border-radius: $app-radius-control;
 }
 
 .search-button::after {

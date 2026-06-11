@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <view class="page">
     <view class="hero">
       <view class="hero-top">
@@ -83,20 +83,20 @@ function toggleChip(chip) {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .page {
   min-height: 100vh;
-  padding: 28rpx 28rpx 148rpx;
-  background: #f5f8f8;
+  padding: $app-page-padding $app-page-padding $app-page-bottom-padding;
+  background: $app-color-page;
   box-sizing: border-box;
 }
 
 .hero {
   padding: 30rpx;
-  color: #143034;
-  background: linear-gradient(135deg, #dffafa 0%, #ffffff 62%);
-  border: 1rpx solid #d8eeee;
-  border-radius: 8rpx;
+  color: $app-color-text-heading;
+  background: linear-gradient(135deg, $app-color-primary-hero 0%, $app-color-surface 62%);
+  border: 1rpx solid $app-color-primary-border-soft;
+  border-radius: $app-radius-card;
 }
 
 .hero-top,
@@ -118,14 +118,14 @@ function toggleChip(chip) {
 }
 
 .eyebrow {
-  color: #527174;
+  color: $app-color-text-eyebrow;
   font-size: 24rpx;
   line-height: 32rpx;
 }
 
 .title {
   margin-top: 8rpx;
-  color: #112c30;
+  color: $app-color-text-title;
   font-size: 44rpx;
   font-weight: 800;
   line-height: 54rpx;
@@ -134,18 +134,18 @@ function toggleChip(chip) {
 .city-pill {
   flex-shrink: 0;
   padding: 14rpx 22rpx;
-  color: #007f82;
+  color: $app-color-primary-dark;
   font-size: 24rpx;
   line-height: 28rpx;
-  background: #ffffff;
-  border-radius: 6rpx;
+  background: $app-color-surface;
+  border-radius: $app-radius-control;
 }
 
 .stats {
   justify-content: space-between;
   margin-top: 30rpx;
   padding-top: 26rpx;
-  border-top: 1rpx solid rgba(0, 166, 166, 0.14);
+  border-top: 1rpx solid $app-color-primary-divider;
 }
 
 .stat-item {
@@ -156,7 +156,7 @@ function toggleChip(chip) {
 }
 
 .stat-value {
-  color: #132c31;
+  color: $app-color-text-strong;
   font-size: 32rpx;
   font-weight: 800;
   line-height: 40rpx;
@@ -164,7 +164,7 @@ function toggleChip(chip) {
 
 .stat-label {
   margin-top: 6rpx;
-  color: #6a7e82;
+  color: $app-color-text-muted;
   font-size: 22rpx;
   line-height: 28rpx;
 }
@@ -182,11 +182,11 @@ function toggleChip(chip) {
   height: 58rpx;
   margin: 0;
   padding: 0 10rpx;
-  color: #5e7074;
+  color: $app-color-text-tab;
   font-size: 28rpx;
   line-height: 58rpx;
   background: transparent;
-  border-radius: 0;
+  border-radius: $app-radius-none;
 }
 
 .tab::after {
@@ -194,7 +194,7 @@ function toggleChip(chip) {
 }
 
 .tab.active {
-  color: #102f34;
+  color: $app-color-text-strong;
   font-weight: 800;
 }
 
@@ -214,13 +214,13 @@ function toggleChip(chip) {
   align-items: center;
   flex-direction: column;
   padding: 60rpx 24rpx;
-  background: #ffffff;
-  border: 1rpx solid #e8eef0;
-  border-radius: 8rpx;
+  background: $app-color-surface;
+  border: 1rpx solid $app-color-border;
+  border-radius: $app-radius-card;
 }
 
 .empty-title {
-  color: #273f43;
+  color: $app-color-text-empty;
   font-size: 30rpx;
   font-weight: 700;
   line-height: 38rpx;
@@ -228,7 +228,7 @@ function toggleChip(chip) {
 
 .empty-desc {
   margin-top: 10rpx;
-  color: #74868a;
+  color: $app-color-text-empty-desc;
   font-size: 24rpx;
   line-height: 32rpx;
 }

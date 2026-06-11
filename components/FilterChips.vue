@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <scroll-view class="chip-scroll" scroll-x>
     <view class="chip-list">
       <button
@@ -30,7 +30,7 @@ defineProps({
 defineEmits(['select'])
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .chip-scroll {
   width: 100%;
   white-space: nowrap;
@@ -50,16 +50,16 @@ defineEmits(['select'])
   height: 56rpx;
   margin: 0;
   padding: 0 24rpx;
-  color: #42585c;
+  color: $app-color-text-chip;
   font-size: 24rpx;
   line-height: 56rpx;
-  background: #f1f6f7;
-  border-radius: 6rpx;
+  background: $app-color-chip;
+  border-radius: $app-radius-control;
 }
 
 .chip.active {
-  color: #007f82;
-  background: #dcfbfb;
+  color: $app-color-primary-dark;
+  background: $app-color-primary-soft;
 }
 
 .chip::after {

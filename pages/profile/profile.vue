@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <view class="page">
     <view class="profile-card">
       <view class="profile-top">
@@ -49,20 +49,20 @@ import BottomNav from '@/components/BottomNav.vue'
 import { profileMenus, profileStats } from '@/data/profile.js'
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .page {
   min-height: 100vh;
-  padding: 28rpx 28rpx 148rpx;
-  background: #f5f8f8;
+  padding: $app-page-padding $app-page-padding $app-page-bottom-padding;
+  background: $app-color-page;
   box-sizing: border-box;
 }
 
 .profile-card,
 .intent-card,
 .menu-item {
-  background: #ffffff;
-  border: 1rpx solid #e8eef0;
-  border-radius: 8rpx;
+  background: $app-color-surface;
+  border: 1rpx solid $app-color-border;
+  border-radius: $app-radius-card;
 }
 
 .profile-card,
@@ -89,11 +89,11 @@ import { profileMenus, profileStats } from '@/data/profile.js'
   justify-content: center;
   width: 92rpx;
   height: 92rpx;
-  color: #ffffff;
+  color: $app-color-surface;
   font-size: 34rpx;
   font-weight: 800;
-  background: #00a6a6;
-  border-radius: 8rpx;
+  background: $app-color-primary;
+  border-radius: $app-radius-card;
 }
 
 .profile-main {
@@ -104,7 +104,7 @@ import { profileMenus, profileStats } from '@/data/profile.js'
 }
 
 .name {
-  color: #102f34;
+  color: $app-color-text-strong;
   font-size: 38rpx;
   font-weight: 800;
   line-height: 48rpx;
@@ -112,7 +112,7 @@ import { profileMenus, profileStats } from '@/data/profile.js'
 
 .desc {
   margin-top: 6rpx;
-  color: #728286;
+  color: $app-color-text-secondary;
   font-size: 24rpx;
   line-height: 32rpx;
 }
@@ -120,7 +120,7 @@ import { profileMenus, profileStats } from '@/data/profile.js'
 .edit,
 .section-action {
   flex-shrink: 0;
-  color: #00a6a6;
+  color: $app-color-primary;
   font-size: 24rpx;
 }
 
@@ -128,7 +128,7 @@ import { profileMenus, profileStats } from '@/data/profile.js'
   justify-content: space-between;
   margin-top: 30rpx;
   padding-top: 28rpx;
-  border-top: 1rpx solid #edf2f3;
+  border-top: 1rpx solid $app-color-border-light;
 }
 
 .stat {
@@ -138,7 +138,7 @@ import { profileMenus, profileStats } from '@/data/profile.js'
 }
 
 .stat-value {
-  color: #132c31;
+  color: $app-color-text-strong;
   font-size: 32rpx;
   font-weight: 800;
   line-height: 40rpx;
@@ -146,7 +146,7 @@ import { profileMenus, profileStats } from '@/data/profile.js'
 
 .stat-label {
   margin-top: 6rpx;
-  color: #6a7e82;
+  color: $app-color-text-muted;
   font-size: 22rpx;
   line-height: 28rpx;
 }
@@ -164,7 +164,7 @@ import { profileMenus, profileStats } from '@/data/profile.js'
 }
 
 .section-title {
-  color: #102f34;
+  color: $app-color-text-strong;
   font-size: 30rpx;
   font-weight: 800;
   line-height: 38rpx;
@@ -175,7 +175,7 @@ import { profileMenus, profileStats } from '@/data/profile.js'
 }
 
 .intent-title {
-  color: #172b2d;
+  color: $app-color-text;
   font-size: 30rpx;
   font-weight: 800;
   line-height: 38rpx;
@@ -183,7 +183,7 @@ import { profileMenus, profileStats } from '@/data/profile.js'
 
 .intent-salary {
   flex-shrink: 0;
-  color: #00a6a6;
+  color: $app-color-primary;
   font-size: 30rpx;
   font-weight: 800;
 }
@@ -191,7 +191,7 @@ import { profileMenus, profileStats } from '@/data/profile.js'
 .intent-desc {
   display: block;
   margin-top: 12rpx;
-  color: #728286;
+  color: $app-color-text-secondary;
   font-size: 24rpx;
   line-height: 34rpx;
 }
@@ -212,7 +212,7 @@ import { profileMenus, profileStats } from '@/data/profile.js'
 }
 
 .menu-title {
-  color: #172b2d;
+  color: $app-color-text;
   font-size: 28rpx;
   font-weight: 800;
   line-height: 36rpx;
@@ -220,14 +220,14 @@ import { profileMenus, profileStats } from '@/data/profile.js'
 
 .menu-desc {
   margin-top: 8rpx;
-  color: #728286;
+  color: $app-color-text-secondary;
   font-size: 23rpx;
   line-height: 32rpx;
 }
 
 .arrow {
   flex-shrink: 0;
-  color: #9aabad;
+  color: $app-color-text-arrow;
   font-size: 42rpx;
   line-height: 42rpx;
 }

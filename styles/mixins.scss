@@ -1,0 +1,12 @@
+/* 公共 mixin */
+@mixin app-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin app-card {
+  background: $app-color-surface;
+  border: 1rpx solid $app-color-border;
+  border-radius: $app-radius-card;
+}

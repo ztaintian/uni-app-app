@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <view class="job-card" :class="{ featured: job.highlight }">
     <view class="job-head">
       <view class="job-main">
@@ -43,17 +43,17 @@ const companyMeta = computed(() => formatCompanyMeta(props.job))
 const companyInitial = computed(() => props.job.company.slice(0, 1))
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .job-card {
   padding: 28rpx;
-  background: #ffffff;
-  border: 1rpx solid #e8eef0;
-  border-radius: 8rpx;
+  background: $app-color-surface;
+  border: 1rpx solid $app-color-border;
+  border-radius: $app-radius-card;
 }
 
 .job-card.featured {
-  border-color: #bceeee;
-  box-shadow: 0 10rpx 26rpx rgba(0, 166, 166, 0.1);
+  border-color: $app-color-primary-border;
+  box-shadow: $app-shadow-featured;
 }
 
 .job-head,
@@ -77,7 +77,7 @@ const companyInitial = computed(() => props.job.company.slice(0, 1))
 }
 
 .job-title {
-  color: #14292d;
+  color: $app-color-text-card-title;
   font-size: 34rpx;
   font-weight: 700;
   line-height: 44rpx;
@@ -87,14 +87,14 @@ const companyInitial = computed(() => props.job.company.slice(0, 1))
 .company-meta,
 .active-time {
   margin-top: 8rpx;
-  color: #728286;
+  color: $app-color-text-secondary;
   font-size: 24rpx;
   line-height: 32rpx;
 }
 
 .salary {
   flex-shrink: 0;
-  color: #00a6a6;
+  color: $app-color-primary;
   font-size: 32rpx;
   font-weight: 700;
 }
@@ -108,18 +108,18 @@ const companyInitial = computed(() => props.job.company.slice(0, 1))
 
 .tag {
   padding: 8rpx 14rpx;
-  color: #52666a;
+  color: $app-color-text-tag;
   font-size: 22rpx;
   line-height: 28rpx;
-  background: #f2f6f7;
-  border-radius: 4rpx;
+  background: $app-color-surface-muted;
+  border-radius: $app-radius-tag;
 }
 
 .company-row {
   gap: 18rpx;
   margin-top: 26rpx;
   padding-top: 24rpx;
-  border-top: 1rpx solid #edf2f3;
+  border-top: 1rpx solid $app-color-border-light;
 }
 
 .logo {
@@ -128,16 +128,16 @@ const companyInitial = computed(() => props.job.company.slice(0, 1))
   justify-content: center;
   width: 68rpx;
   height: 68rpx;
-  color: #ffffff;
+  color: $app-color-surface;
   font-size: 28rpx;
   font-weight: 700;
-  background: #243b53;
-  border-radius: 8rpx;
+  background: $app-color-brand-deep;
+  border-radius: $app-radius-card;
 }
 
 .company-name,
 .recruiter {
-  color: #263b3f;
+  color: $app-color-text-card;
   font-size: 26rpx;
   line-height: 34rpx;
 }

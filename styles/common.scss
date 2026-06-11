@@ -1,0 +1,7 @@
+/* 公共样式 */
+.app-page {
+  min-height: 100vh;
+  padding: $app-page-padding $app-page-padding $app-page-bottom-padding;
+  background: $app-color-page;
+  box-sizing: border-box;
+}
